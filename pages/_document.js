@@ -34,6 +34,10 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
+          <link
+            href="https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap"
+            rel="stylesheet"
+          />
           <GlobalStyles />
         </Head>
         <body>
