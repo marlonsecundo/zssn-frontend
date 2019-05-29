@@ -24,6 +24,5 @@ const media = Object.keys(sizes).reduce((acc, label) => {
 export default {
   sizes,
   media,
-  maxHeigth: window.screen.height,
-  maxWidth: window.screen.width,
+  baseMargin: '4%',
 };
