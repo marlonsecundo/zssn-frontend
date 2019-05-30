@@ -4,7 +4,8 @@ import { Container, Img, Text } from './styles';
 
 const DevAbout = () => (
   <Container>
-    <Img />
+    <Img src="/static/img/hawk.jpg" />
+    <Text>Marlon Secundo</Text>
   </Container>
 );
 
