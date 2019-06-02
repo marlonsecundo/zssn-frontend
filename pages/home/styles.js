@@ -1,28 +1,34 @@
 import styled from 'styled-components';
-import { colors, metrics } from '~/styles';
+import { colors, metrics, animations } from '~/styles';
 
 const { media } = metrics;
 
 export const Container = styled.div`
-  background: ${colors.background};
+  background-image: url('../static/img/background.png');
   flex: 1;
   flex-direction: row;
 
   ${media.mobileL`
     flex-direction: column-reverse;
+    justify-content: space-between;
 
   `};
 `;
 
-export const Menu = styled.section`
+export const Index = styled.div`
   flex: 1;
 `;
 
 export const CenterContent = styled.section`
-  flex: 1;
+  flex: 2;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  ${media.mobileL`
+    flex: 1;
+
+  `};
 `;
 
 export const ImgZombie = styled.img`
@@ -39,6 +45,7 @@ export const ImgDesc = styled.p`
   text-align: center;
   font-style: italic;
   font-size: 200%;
+  animation: ${animations.creepy} 0.34s linear infinite;
 
   ${media.mobileL`
     font-size: 150%;
@@ -52,6 +59,7 @@ export const About = styled.section`
 `;
 
 export const StyledLink = styled.a`
+  display: inline;
   color: ${colors.third};
 `;
 
@@ -66,4 +74,8 @@ export const Description = styled.p`
   align-self: center;
   color: ${colors.text};
   text-align: center;
+`;
+
+export const CreepyEffect = styled.svg`
+  position: absolute;
 `;

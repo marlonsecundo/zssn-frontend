@@ -1,27 +1,32 @@
 import React from 'react';
 // eslint-disable-next-line import/no-unresolved
 import Link from 'next/Link';
-
 import {
   Container,
   About,
   ZSSN,
-  Menu,
+  Index,
   CenterContent,
   Description,
   ImgZombie,
   ImgDesc,
   StyledLink,
 } from './styles';
-import DevAbout from '~/components/DevAbout';
+import { DevAbout, CreepyEffect } from '~/components';
+import Menu from './components/Menu';
 
 const Home = () => (
   <Container>
-    <Menu />
+    <Index>
+      <Menu />
+    </Index>
+
     <CenterContent>
       <ImgZombie src="/static/img/zombie.svg" alt="Zombie" />
       <ImgDesc>ZOMBIEEEESSSSS</ImgDesc>
+      <CreepyEffect />
     </CenterContent>
+
     <About>
       <ZSSN>ZSSN</ZSSN>
       <Description>
@@ -32,7 +37,6 @@ const Home = () => (
         </StyledLink>
       </Description>
     </About>
-
     <DevAbout />
   </Container>
 );
