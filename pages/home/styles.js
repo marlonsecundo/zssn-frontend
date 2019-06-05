@@ -32,20 +32,21 @@ export const CenterContent = styled.section`
 `;
 
 export const ImgZombie = styled.img`
-  height: 45%;
-
+  height: 35%;
+  margin-top: 10%;
+  margin-bottom: 10%;
   ${media.mobileL`
     height: 70%;
   `};
 `;
 
 export const ImgDesc = styled.p`
-  margin-top: ${metrics.baseMargin};
-  color: ${colors.third};
+  padding-right: 0.1em;
+  color: ${colors.secondary};
   text-align: center;
   font-style: italic;
   font-size: 200%;
-  animation: ${animations.creepy} 0.34s linear infinite;
+  animation: ${animations.opacity} 5s ease infinite alternate-reverse;
 
   ${media.mobileL`
     font-size: 150%;
@@ -54,13 +55,14 @@ export const ImgDesc = styled.p`
 
 export const About = styled.section`
   flex-direction: column;
+  align-items: center;
   flex: 1;
   padding: ${metrics.baseMargin};
 `;
 
 export const StyledLink = styled.a`
   display: inline;
-  color: ${colors.third};
+  color: ${colors.secondary};
 `;
 
 export const ZSSN = styled.h1`
@@ -74,8 +76,23 @@ export const Description = styled.p`
   align-self: center;
   color: ${colors.text};
   text-align: center;
+  margin-bottom: 17%;
 `;
 
 export const CreepyEffect = styled.svg`
   position: absolute;
+`;
+
+export const StartContent = styled.p`
+  color: ${colors.primary};
+  font-family: 'STANFORD FREE';
+  font-size: 3em;
+  padding: 0.3em;
+`;
+
+export const Start = styled.a`
+  background-color: ${colors.background};
+  border-radius: 0.7em;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  animation: ${animations.creepy} 0.34s linear infinite;
 `;

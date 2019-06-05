@@ -23,7 +23,7 @@ export const Container = styled.nav`
 
 export const Title = styled.h1`
   padding-bottom: 0.5em;
-  color: ${colors.third};
+  color: ${colors.primary};
   font-weight: lighter;
   margin-bottom: 1em;
   overflow: hidden;

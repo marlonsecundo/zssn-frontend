@@ -2,6 +2,12 @@ import { createGlobalStyle } from 'styled-components';
 import colors from './colors';
 
 const GlobalStyles = createGlobalStyle`
+
+@font-face {
+  font-family: "STANFORD FREE";
+  src: url("/static/fonts/stanford-free.ttf");
+}
+
 * {
   box-sizing: border-box;
   margin: 0;

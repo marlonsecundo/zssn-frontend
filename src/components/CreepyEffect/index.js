@@ -1,7 +1,12 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const Svg = styled.svg`
+  position: absolute;
+`;
 
 const CreepyEffect = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="creepy">
+  <Svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="creepy">
     <defs>
       <filter id="squiggly-0">
         <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="0" />
@@ -26,6 +31,6 @@ const CreepyEffect = () => (
         <feDisplacementMap in="SourceGraphic" in2="noise" scale="6" />
       </filter>
     </defs>
-  </svg>
+  </Svg>
 );
 export default CreepyEffect;

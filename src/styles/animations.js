@@ -27,4 +27,16 @@ export default {
       filter url('#squiggly-4')
     }
   `,
+
+  opacity: keyframes`
+    0%
+    {
+      opacity: 0;
+    }
+
+    100%
+    {
+      opacity: 1;
+    }
+  `,
 };
