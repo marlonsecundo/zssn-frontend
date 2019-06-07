@@ -1,9 +1,19 @@
-import styled from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 import { colors, metrics, animations } from '~/styles';
 
 const { media } = metrics;
 
-export const Container = styled.div`
+export const CustomGlobalStyles = createGlobalStyle`
+  html, body {
+    height: 141.5%;
+  }
+
+  #__next {
+    flex-direction: column;
+  }
+`;
+
+export const Container = styled.section`
   background-image: url('../static/img/background.png');
   flex: 1;
   flex-direction: row;
@@ -17,10 +27,11 @@ export const Container = styled.div`
 
 export const Index = styled.div`
   flex: 1;
+  flex-direction: column;
 `;
 
 export const CenterContent = styled.section`
-  flex: 2;
+  flex: 1.5;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -32,7 +43,7 @@ export const CenterContent = styled.section`
 `;
 
 export const ImgZombie = styled.img`
-  height: 35%;
+  height: 15em;
   margin-top: 10%;
   margin-bottom: 10%;
   ${media.mobileL`
@@ -56,8 +67,9 @@ export const ImgDesc = styled.p`
 export const About = styled.section`
   flex-direction: column;
   align-items: center;
+  padding-top: 4em;
+  padding-left: 2em;
   flex: 1;
-  padding: ${metrics.baseMargin};
 `;
 
 export const StyledLink = styled.a`

@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 // eslint-disable-next-line import/no-unresolved
-import Link from 'next/Link';
 import {
   Container,
   About,
@@ -13,16 +12,28 @@ import {
   StyledLink,
   Start,
   StartContent,
+  CustomGlobalStyles,
 } from './styles';
 import { DevAbout, CreepyEffect } from '~/components';
 import Menu from './components/Menu';
 import StatusItem from './components/StatusItem';
 
+import Tecnologies from '../tecnologies';
+
 const Home = () => {
   const LeftContent = (
-    <Index>
-      <Menu />
-    </Index>
+    <About>
+      <ZSSN>ZSSN</ZSSN>
+      <Description>
+        A Zombie Survival Social Network frontend app, that consumes a
+        {' '}
+        <StyledLink target="blank" href="https://github.com/marlonsecundo/zssn-backend">
+          Rest API
+        </StyledLink>
+      </Description>
+      <StatusItem count={115} image="/static/img/person.svg#person" text="Survivors" />
+      <StatusItem count={204} image="/static/img/zombie2.svg#zombie2" text="Zombies" />
+    </About>
   );
 
   const MiddleContent = (
@@ -40,27 +51,22 @@ const Home = () => {
   );
 
   const RightContent = (
-    <About>
-      <ZSSN>ZSSN</ZSSN>
-      <Description>
-        A Zombie Survival Social Network frontend app, that consumes a
-        {' '}
-        <StyledLink target="blank" href="https://github.com/marlonsecundo/zssn-backend">
-          Rest API
-        </StyledLink>
-      </Description>
-      <StatusItem count={115} image="/static/img/person.svg#person" text="Survivors" />
-      <StatusItem count={204} image="/static/img/zombie2.svg#zombie2" text="Zombies" />
-    </About>
+    <Index>
+      <Menu />
+    </Index>
   );
 
   return (
-    <Container>
-      {LeftContent}
-      {MiddleContent}
-      {RightContent}
-      <DevAbout />
-    </Container>
+    <Fragment>
+      <CustomGlobalStyles />
+      <Container>
+        {LeftContent}
+        {MiddleContent}
+        {RightContent}
+        <DevAbout />
+      </Container>
+      <Tecnologies />
+    </Fragment>
   );
 };
 

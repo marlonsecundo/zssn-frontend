@@ -7,6 +7,7 @@ export const Container = styled.nav`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  align-self: flex-end;
 
   position: fixed;
   height: 100%;

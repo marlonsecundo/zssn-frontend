@@ -6,7 +6,7 @@ export const Container = styled.section`
   height: 7em;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 1em;
+  margin-bottom: 3em;
 `;
 
 export const Image = styled.svg`
