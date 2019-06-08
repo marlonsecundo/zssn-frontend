@@ -5,7 +5,7 @@ const { media } = metrics;
 
 export const CustomGlobalStyles = createGlobalStyle`
   html, body {
-    height: 141.5%;
+    height: 141.4%;
   }
 
   #__next {
@@ -25,9 +25,13 @@ export const Container = styled.section`
   `};
 `;
 
-export const Index = styled.div`
+export const Index = styled.section`
   flex: 1;
   flex-direction: column;
+
+  ${media.mobileL`
+    flex: 0.8;
+  `}
 `;
 
 export const CenterContent = styled.section`
@@ -37,8 +41,7 @@ export const CenterContent = styled.section`
   align-items: center;
 
   ${media.mobileL`
-    flex: 1;
-
+    flex: 2;
   `};
 `;
 
@@ -47,7 +50,7 @@ export const ImgZombie = styled.img`
   margin-top: 10%;
   margin-bottom: 10%;
   ${media.mobileL`
-    height: 70%;
+    height: 40%;
   `};
 `;
 
@@ -70,6 +73,11 @@ export const About = styled.section`
   padding-top: 4em;
   padding-left: 2em;
   flex: 1;
+
+  ${media.mobileL`
+    padding: 1em;
+
+  `};
 `;
 
 export const StyledLink = styled.a`
@@ -82,6 +90,10 @@ export const ZSSN = styled.h1`
   font-weight: bold;
   align-self: center;
   color: ${colors.primary};
+
+  ${media.mobileL`
+    font-size: 250%;
+  `}
 `;
 
 export const Description = styled.p`

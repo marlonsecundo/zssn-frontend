@@ -18,7 +18,7 @@ import { DevAbout, CreepyEffect } from '~/components';
 import Menu from './components/Menu';
 import StatusItem from './components/StatusItem';
 
-import Tecnologies from '../tecnologies';
+import Technologies from '../technologies';
 
 const Home = () => {
   const LeftContent = (
@@ -65,7 +65,7 @@ const Home = () => {
         {RightContent}
         <DevAbout />
       </Container>
-      <Tecnologies />
+      <Technologies />
     </Fragment>
   );
 };

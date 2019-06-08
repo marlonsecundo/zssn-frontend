@@ -18,6 +18,7 @@ export const Container = styled.nav`
     align-self: flex-end;
     height: 20%;
     width: 100%;
+    padding-top: 1em;
 
   `}
 `;
@@ -28,6 +29,7 @@ export const Title = styled.h1`
   font-weight: lighter;
   margin-bottom: 1em;
   overflow: hidden;
+  font-size: 1.5em;
 
   ${media.mobileL`
     width: 0%;

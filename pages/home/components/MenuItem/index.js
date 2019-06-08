@@ -5,8 +5,10 @@ import {
   Container, Image, Bar, Text,
 } from './styles';
 
-const MenuItem = ({ image, text }) => (
-  <Container>
+const MenuItem = ({
+  image, text, selected, onClick,
+}) => (
+  <Container selected={selected} onClick={onClick}>
     <Image>
       <use xlinkHref={image} />
     </Image>
@@ -19,6 +21,12 @@ const MenuItem = ({ image, text }) => (
 MenuItem.propTypes = {
   image: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
+  selected: PropTypes.bool,
+  onClick: PropTypes.func.isRequired,
+};
+
+MenuItem.defaultProps = {
+  selected: false,
 };
 
 export default MenuItem;

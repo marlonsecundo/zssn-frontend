@@ -1,23 +1,6 @@
 import styled from 'styled-components';
 import { colors } from '~/styles';
 
-export const Container = styled.a`
-  margin-bottom: 2em;
-  height: 4.5em;
-  width: 4.5em;
-  flex-direction: column;
-`;
-
-export const Image = styled.svg`
-  fill: ${colors.third};
-
-  transition: fill 300ms;
-
-  ${Container}:hover & {
-    fill: ${colors.secondary};
-  }
-`;
-
 export const Bar = styled.div`
   align-self: center;
   align-items: center;
@@ -31,10 +14,43 @@ export const Bar = styled.div`
   margin-top: 0.3em;
 
   transition: width 300ms;
+`;
 
-  ${Container}:hover & {
-    width: 100%;
+export const Image = styled.svg`
+  fill: ${colors.third};
+
+  padding: 0.7em;
+  padding-left: 0;
+  padding-right: 0;
+
+  border-radius: 1em;
+
+  transition: fill 300ms;
+  transition: background-color 300ms;
+
+  :hover {
+    background-color: ${colors.whiteTransparent(0.1)};
   }
+`;
+
+export const Container = styled.a`
+  flex-direction: column;
+
+  margin-bottom: 3em;
+
+  height: 5.5em;
+  width: 4.7em;
+
+  ${props => (props.selected
+    ? `
+      ${Image} {
+        fill: ${colors.secondary};
+      }
+
+      ${Bar} {
+        width: 100%;
+      }`
+    : '')}
 `;
 
 export const Text = styled.p`

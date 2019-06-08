@@ -18,6 +18,8 @@ export const Title = styled.h1`
 export const SubTitle = styled.h3`
   color: ${colors.text};
   font-weight: normal;
+  line-height: 2;
+  width: 50%;
 `;
 
 export const TecItemsContainer = styled.section`

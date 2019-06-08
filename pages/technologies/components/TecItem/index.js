@@ -5,8 +5,10 @@ import {
   Container, ImageSVG, Text, Image,
 } from './styles';
 
-const TecItem = ({ text, svg, img }) => (
-  <Container>
+const TecItem = ({
+  text, desc, svg, img, onMouseEnter,
+}) => (
+  <Container onMouseEnter={() => onMouseEnter({ title: text, text: desc })}>
     {svg ? (
       <ImageSVG>
         <use xlinkHref={svg} />
@@ -21,13 +23,16 @@ const TecItem = ({ text, svg, img }) => (
 
 TecItem.propTypes = {
   text: PropTypes.string.isRequired,
+  desc: PropTypes.string.isRequired,
   svg: PropTypes.string,
   img: PropTypes.string,
+  onMouseEnter: PropTypes.func,
 };
 
 TecItem.defaultProps = {
   svg: null,
   img: '/static/img/hawk.jpg',
+  onMouseEnter: () => {},
 };
 
 export default TecItem;
