@@ -34,7 +34,7 @@ const Technologies = () => {
           onMouseEnter={onMouseEnter}
         />
         <TecItem
-          text="Styled Components"
+          text="Styled"
           img="/static/img/styled.png"
           desc="Styled-components is the result of wondering how we could enhance CSS for styling React component systems. By focusing on a single use case we managed to optimize the experience for developers as well as the output for end users."
           onMouseEnter={onMouseEnter}

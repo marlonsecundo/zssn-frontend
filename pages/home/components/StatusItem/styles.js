@@ -1,5 +1,7 @@
 import styled from 'styled-components';
-import { colors } from '~/styles';
+import { colors, metrics } from '~/styles';
+
+const { media } = metrics;
 
 export const Container = styled.section`
   width: 6em;
@@ -7,6 +9,12 @@ export const Container = styled.section`
   flex-direction: column;
   align-items: center;
   margin-bottom: 3em;
+
+  ${media.mobileL`
+    height: 0;
+    width: 0;
+    overflow: hidden;
+  `}
 `;
 
 export const Image = styled.svg`

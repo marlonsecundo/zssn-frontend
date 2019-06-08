@@ -1,5 +1,7 @@
 import styled from 'styled-components';
-import { colors } from '~/styles';
+import { colors, metrics } from '~/styles';
+
+const { media } = metrics;
 
 export const Bar = styled.div`
   align-self: center;
@@ -14,6 +16,10 @@ export const Bar = styled.div`
   margin-top: 0.3em;
 
   transition: width 300ms;
+
+  ${media.mobileL`
+      height: 0%;
+  `}
 `;
 
 export const Image = styled.svg`
@@ -51,6 +57,12 @@ export const Container = styled.a`
         width: 100%;
       }`
     : '')}
+
+  ${media.mobileL`
+      height: 4.5em;
+      width: 3.7em;
+      margin-right: 1em;
+  `}
 `;
 
 export const Text = styled.p`

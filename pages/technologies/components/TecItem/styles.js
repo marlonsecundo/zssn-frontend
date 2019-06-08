@@ -1,5 +1,7 @@
 import styled from 'styled-components';
-import { colors } from '~/styles';
+import { colors, metrics } from '~/styles';
+
+const { media } = metrics;
 
 export const Container = styled.div`
   flex-direction: column;
@@ -7,8 +9,9 @@ export const Container = styled.div`
   align-items: center;
   border-radius: 20px;
 
-  padding: 1em;
-  margin-right: 3em;
+  padding: 3%;
+  margin-right: 5%;
+  margin-bottom: 3%;
 
   background-color: ${colors.whiteTransparent(0.01)};
 
@@ -20,6 +23,11 @@ export const Container = styled.div`
   :hover {
     background-color: ${colors.whiteTransparent(0.1)};
   }
+
+  ${media.mobileL`
+    height: 4em;
+    width: 4em;
+  `}
 `;
 
 export const ImageSVG = styled.svg`

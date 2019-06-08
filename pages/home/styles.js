@@ -11,6 +11,13 @@ export const CustomGlobalStyles = createGlobalStyle`
   #__next {
     flex-direction: column;
   }
+
+  ${media.mobileL`
+    html, body {
+      height: 141.4%;
+    }
+
+  `}
 `;
 
 export const Container = styled.section`
@@ -30,7 +37,7 @@ export const Index = styled.section`
   flex-direction: column;
 
   ${media.mobileL`
-    flex: 0.8;
+    flex: 0.6;
   `}
 `;
 
