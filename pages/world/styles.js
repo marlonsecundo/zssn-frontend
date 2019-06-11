@@ -10,10 +10,15 @@ export const Container = styled.div`
 export const Survivors = styled.section`
   flex: 1;
   flex-direction: column;
-  background-color: red;
 `;
 
 export const WorldMap = styled.section`
-  flex: 2;
-  background-color: blue;
+  height: 100%;
+  width: 70%;
+  background-color: ${colors.background};
+`;
+
+export const List = styled.div`
+  flex: 1;
+  background-color: ${colors.background};
 `;

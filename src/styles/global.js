@@ -25,8 +25,13 @@ html, body {
   height: 100%;
 }
 
-div, section, nav, a {
+div, section, nav, a, button {
   display: flex;
+}
+
+button, input {
+   border: none;
+   outline: none;
 }
 
 a {
