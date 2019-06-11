@@ -5,7 +5,7 @@ const { media } = metrics;
 
 export const CustomGlobalStyles = createGlobalStyle`
   html, body {
-    height: 141.4%;
+    height: 145%;
   }
 
   #__next {
@@ -126,4 +126,5 @@ export const Start = styled.a`
   border-radius: 0.7em;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   animation: ${animations.creepy} 0.34s linear infinite;
+  cursor: pointer;
 `;

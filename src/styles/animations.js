@@ -39,4 +39,17 @@ export default {
       opacity: 1;
     }
   `,
+
+  textChange: text => keyframes`
+    0%
+    {
+      opacity: 0;
+    }
+
+    100%
+    {
+      opacity: 1;
+      content: '${text}';
+    }
+  `,
 };

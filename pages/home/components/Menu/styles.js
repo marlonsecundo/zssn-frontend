@@ -9,8 +9,10 @@ export const Container = styled.nav`
   flex-direction: column;
   align-self: flex-end;
 
+  padding-top: 11%;
+
   position: fixed;
-  height: 100%;
+  height: 60%;
   width: 20%;
 
   ${media.mobileL`
@@ -19,7 +21,6 @@ export const Container = styled.nav`
     height: 20%;
     width: 100%;
     padding-top: 1em;
-
   `}
 `;
 

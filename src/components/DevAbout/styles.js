@@ -5,7 +5,7 @@ export const Container = styled.section`
   align-items: center;
   overflow: hidden;
 
-  position: absolute;
+  position: fixed;
   bottom: 0;
   right: 0;
 

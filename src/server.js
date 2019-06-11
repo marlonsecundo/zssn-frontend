@@ -1,8 +1,8 @@
-const express = require("express");
-const next = require("next");
-const routes = require("./routes");
+const express = require('express');
+const next = require('next');
+const routes = require('./routes');
 
-const dev = process.env.NODE_ENV !== "production";
+const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
 const handle = app.getRequestHandler();
 
@@ -13,14 +13,14 @@ app
 
     routes.getRequestHandler(server, app);
 
-    server.get("*", (req, res) => handle(req, res));
+    server.get('*', (req, res) => handle(req, res));
 
-    server.listen(3000, err => {
+    server.listen(3000, (err) => {
       if (err) throw err;
-      console.log("> Ready on http://localhost:3000");
+      console.log('> Ready on http://localhost:3000');
     });
   })
-  .catch(ex => {
+  .catch((ex) => {
     console.error(ex.stack);
     process.exit(1);
   });

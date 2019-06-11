@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colors, metrics } from '~/styles';
+import { colors, metrics, animations } from '~/styles';
 
 const { media } = metrics;
 
@@ -8,6 +8,15 @@ export const Container = styled.section`
   flex-direction: column;
   background-color: ${colors.background};
   padding-left: 8%;
+`;
+
+export const BackDiv = styled.div`
+  position: absolute;
+  left: 0;
+  width: 60%;
+  height: 45%;
+  border-bottom-right-radius: 70px;
+  background: ${colors.whiteTransparent(0.1)};
 `;
 
 export const Title = styled.h1`
@@ -20,6 +29,8 @@ export const Title = styled.h1`
     font-size: 200%;
     padding-top: 22%;
   `}
+  content: '';
+  animation: ${props => animations.textChange(props.children)} 1s ease-in-out 0s 1 both;
 `;
 
 export const SubTitle = styled.h3`
@@ -28,12 +39,13 @@ export const SubTitle = styled.h3`
   line-height: 2;
   width: 50%;
 
+  content: '';
+  animation: ${props => animations.textChange(props.children)} 1s ease-in-out 0s 1 both;
   ${media.mobileL`
 
     line-height: 1.5;
     font-size: 90%;
     width: 90%;
-
   `}
 `;
 

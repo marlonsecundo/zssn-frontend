@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
-// eslint-disable-next-line import/no-unresolved
+import Link from 'next/link';
+
 import {
   Container,
   About,
@@ -14,6 +15,7 @@ import {
   StartContent,
   CustomGlobalStyles,
 } from './styles';
+
 import { DevAbout, CreepyEffect } from '~/components';
 import Menu from './components/Menu';
 import StatusItem from './components/StatusItem';
@@ -42,9 +44,11 @@ const Home = () => {
 
       <ImgZombie src="/static/img/zombie.svg" alt="Zombie" />
 
-      <Start>
-        <StartContent>START</StartContent>
-      </Start>
+      <Link href="/world">
+        <Start>
+          <StartContent>START</StartContent>
+        </Start>
+      </Link>
 
       <CreepyEffect />
     </CenterContent>
