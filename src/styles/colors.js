@@ -8,4 +8,5 @@ export default {
   action: '#c32045',
 
   whiteTransparent: alpha => `rgba(234,242,239,${alpha})`,
+  backgroundTranparent: alpha => `rgba(30,30,36,${alpha})`,
 };

@@ -2,9 +2,10 @@ import React from 'react';
 import GoogleMap from 'google-map-react';
 
 import {
-  Container, WorldMap, Survivors, List,
+  Container, WorldMap, Survivors, List, ListTitle,
 } from './styles';
-import { Search } from './components';
+import { Search, CardSurvivor } from './components';
+import { Logo } from '~/components';
 
 const World = () => (
   <Container>
@@ -21,8 +22,17 @@ const World = () => (
     </WorldMap>
     <Survivors>
       <Search />
-      <List />
+      <ListTitle>Survivors</ListTitle>
+      <List>
+        <CardSurvivor />
+
+        <CardSurvivor />
+
+        <CardSurvivor />
+      </List>
     </Survivors>
+
+    <Logo />
   </Container>
 );
 
