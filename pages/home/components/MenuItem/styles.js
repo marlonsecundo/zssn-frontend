@@ -35,7 +35,7 @@ export const Image = styled.svg`
   transition: background-color 300ms;
 
   :hover {
-    background-color: ${colors.whiteTransparent(0.1)};
+    background-color: ${colors.whiteBackground};
   }
 `;
 

@@ -18,8 +18,8 @@ export const TextInput = styled.input.attrs(() => ({
 `;
 
 export const Icon = styled.svg`
-  height: 2em;
-  width: 2em;
+  height: 1.5em;
+  width: 1.5em;
   fill: ${colors.secondary};
 `;
 

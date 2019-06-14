@@ -8,7 +8,7 @@ export const Container = styled.section`
   width: 12.5em;
   border-radius: 0.5em;
   padding: 1.5em;
-  margin-bottom: 1%;
+  margin-bottom: 3%;
   object-fit: contain;
   box-shadow: 0 20px 25px -5px ${colors.whiteTransparent(0.1)},
     0 10px 10px -5px ${colors.whiteTransparent(0.04)};
@@ -83,7 +83,7 @@ export const LocationIcon = styled.svg`
 `;
 
 export const BagItemIcon = styled.svg`
-  width: 100%;
-  height: 100%;
+  width: 70%;
+  height: 70%;
   fill: ${colors.primary};
 `;

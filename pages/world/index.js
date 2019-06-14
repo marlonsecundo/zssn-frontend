@@ -4,7 +4,7 @@ import GoogleMap from 'google-map-react';
 import {
   Container, WorldMap, Survivors, List, ListTitle,
 } from './styles';
-import { Search, CardSurvivor } from './components';
+import { Search, CardSurvivor, Menu } from './components';
 import { Logo } from '~/components';
 
 const World = () => (
@@ -15,10 +15,11 @@ const World = () => (
         defaultCenter={{ lat: 40.73, lng: -73 }}
         defaultZoom={11}
         bootstrapURLKeys={{
+          keya: 'AIzaSyCNZFT6IgyNQJEZoowp8S9l_-O3jnDNrLQ',
           key: '',
-          /* key: 'AIzaSyCNZFT6IgyNQJEZoowp8S9l_-O3jnDNrLQ' */
         }}
       />
+      <Menu />
     </WorldMap>
     <Survivors>
       <Search />

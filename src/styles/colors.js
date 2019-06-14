@@ -4,6 +4,8 @@ export default {
   secondary: '#f96eb3',
   third: '#67597A',
 
+  whiteBackground: 'rgba(234,242,239, 0.1)',
+
   text: '#EAF2EF',
   action: '#c32045',
 

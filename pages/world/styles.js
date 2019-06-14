@@ -15,20 +15,20 @@ export const Survivors = styled.section`
 
 export const WorldMap = styled.section`
   height: 100%;
-  width: 65%;
+  width: 63%;
   background-color: ${colors.background};
 `;
 
 export const ListTitle = styled.h1`
-  margin: 2%;
+  margin: 4%;
   color: ${colors.primary};
   font-size: 150%;
 `;
 
 export const List = styled.div`
   flex: 1;
-  padding-left: 2%;
-  padding-right: 2%;
+  padding-left: 4%;
+  padding-right: 4%;
   flex-wrap: wrap;
   justify-content: space-between;
   align-content: flex-start;

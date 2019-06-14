@@ -16,7 +16,7 @@ export const BackDiv = styled.div`
   width: 60%;
   height: 45%;
   border-bottom-right-radius: 70px;
-  background: ${colors.whiteTransparent(0.1)};
+  background: ${colors.whiteBackground};
 `;
 
 export const Title = styled.h1`
