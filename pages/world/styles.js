@@ -1,5 +1,11 @@
-import styled from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 import { colors } from '~/styles';
+
+export const CustomGlobalStyles = createGlobalStyle`
+  html, body {
+    overflow: hidden;
+  }
+`;
 
 export const Container = styled.section`
   flex-direction: row;

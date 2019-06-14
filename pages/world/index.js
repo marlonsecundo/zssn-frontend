@@ -1,40 +1,43 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import GoogleMap from 'google-map-react';
 
 import {
-  Container, WorldMap, Survivors, List, ListTitle,
+  Container, WorldMap, Survivors, List, ListTitle, CustomGlobalStyles,
 } from './styles';
 import { Search, CardSurvivor, Menu } from './components';
 import { Logo } from '~/components';
 
 const World = () => (
-  <Container>
-    <WorldMap>
-      <GoogleMap
-        center={{ lat: 40.73, lng: -73 }}
-        defaultCenter={{ lat: 40.73, lng: -73 }}
-        defaultZoom={11}
-        bootstrapURLKeys={{
-          keya: 'AIzaSyCNZFT6IgyNQJEZoowp8S9l_-O3jnDNrLQ',
-          key: '',
-        }}
-      />
-      <Menu />
-    </WorldMap>
-    <Survivors>
-      <Search />
-      <ListTitle>Survivors</ListTitle>
-      <List>
-        <CardSurvivor />
+  <Fragment>
+    <CustomGlobalStyles />
+    <Container>
+      <WorldMap>
+        <GoogleMap
+          center={{ lat: 40.73, lng: -73 }}
+          defaultCenter={{ lat: 40.73, lng: -73 }}
+          defaultZoom={11}
+          bootstrapURLKeys={{
+            keya: 'AIzaSyCNZFT6IgyNQJEZoowp8S9l_-O3jnDNrLQ',
+            key: '',
+          }}
+        />
+        <Menu />
+      </WorldMap>
+      <Survivors>
+        <Search />
+        <ListTitle>Survivors</ListTitle>
+        <List>
+          <CardSurvivor />
 
-        <CardSurvivor />
+          <CardSurvivor />
 
-        <CardSurvivor />
-      </List>
-    </Survivors>
+          <CardSurvivor />
+        </List>
+      </Survivors>
 
-    <Logo />
-  </Container>
+      <Logo />
+    </Container>
+  </Fragment>
 );
 
 export default World;

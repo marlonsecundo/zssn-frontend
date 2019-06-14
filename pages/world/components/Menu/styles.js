@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colors } from '~/styles';
+import { colors, animations } from '~/styles';
 
 export const Container = styled.section`
   align-self: center;
@@ -10,14 +10,16 @@ export const Container = styled.section`
   height: 160%;
 
   background-color: ${colors.background};
-  overflow: hidden;
 
-  border-top-right-radius: 200%;
-  border-bottom-right-radius: 200%;
-  transform: translateX(-90%);
+  animation: ${() => animations.collapseMenu()} 1s ease-in-out 0s 1 both
+    ${({ collapsed }) => (collapsed ? 'normal' : 'reverse')};
 `;
 
-export const PageContainer = styled.section``;
+export const PageContainer = styled.section`
+  flex: 1;
+  width: 100%;
+  height: 62.5%;
+`;
 
 export const ButtonsContainer = styled.section`
   width: 12%;
