@@ -8,16 +8,30 @@ const GlobalStyles = createGlobalStyle`
   src: url("/static/fonts/stanford-free.ttf");
 }
 
+html {
+  height: 100%;
+  overflow: auto;
+  box-sizing: border-box;
+}
+
 * {
   box-sizing: border-box;
+  box-sizing: inherit;
   margin: 0;
   padding: 0;
   outline: 0;
 }
 
-html, body {
+*:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
   height: 100%;
   overflow: auto;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  font-family: 'Nunito', sans-serif;
 }
 
 #__next {
@@ -25,7 +39,7 @@ html, body {
   height: 100%;
 }
 
-div, section, nav, a, button {
+div, section, nav, a, button, form {
   display: flex;
 }
 
@@ -43,18 +57,6 @@ a {
   }
 }
 
-body {
-  text-rendering: optimizeLegibility !important;
-  -webkit-font-smoothing: antialiased !important;
-  font-family: 'Nunito', sans-serif;
-}
-
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
 `;
 
 export default GlobalStyles;

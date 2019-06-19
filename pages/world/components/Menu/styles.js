@@ -10,9 +10,9 @@ export const Container = styled.section`
   height: 160%;
 
   background-color: ${colors.background};
-
+/*
   animation: ${() => animations.collapseMenu()} 1s ease-in-out 0s 1 both
-    ${({ collapsed }) => (collapsed ? 'normal' : 'reverse')};
+    ${({ collapsed }) => (collapsed ? 'normal' : 'reverse')}; */
 `;
 
 export const PageContainer = styled.section`

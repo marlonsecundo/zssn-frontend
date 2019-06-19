@@ -4,12 +4,14 @@ import { colors, metrics } from '~/styles';
 export const Container = styled.section`
   flex-direction: column;
   background-color: ${colors.whiteTransparent(1)};
-  height: 12.5em;
-  width: 12.5em;
   border-radius: 0.5em;
+
+  width: 49%;
+  padding-bottom: 100%;
+
   padding: 1.5em;
   margin-bottom: 3%;
-  object-fit: contain;
+
   box-shadow: 0 20px 25px -5px ${colors.whiteTransparent(0.1)},
     0 10px 10px -5px ${colors.whiteTransparent(0.04)};
 `;
